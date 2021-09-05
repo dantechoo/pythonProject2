@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>listall2</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block title %}<title>show all information</title>{% endblock %}
+{% block content %}
+<h2 align="left">show student table all information</h2>
+<table border="1" cellpadding="0" cellspacing="0">
+	<th>ID</th><th>Name</th><th>Sex</th><th>Birthday</th>
+	<th>Email</th><th>Phone</th><th>Address</th>
+	{% for student in students %}
+		<tr>
+			<td>{{ student.id }} </td>
+			<td>{{ student.cName }} </td>
+			<td>{{ student.cSex}} </td>
+			<td>{{ student.cBirthday }} </td>
+			<td>{{ student.cEmail }} </td>
+			<td>{{ student.cPhone}} </td>
+			<td>{{ student.cAddr }} </td>
+		</tr>
+	{% endfor %}
+</table>
+{% endblock %}
+</body>
+</html>
